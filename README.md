@@ -2,4 +2,7 @@
 
 
 Integrantes:
-Yazmina Yolanda Vecino Yepes, Edgar Andrés Torres Peréz, Carlos Herrera Rojano
+
+* Yazmina Yolanda Vecino Yepes
+* Edgar Andrés Torres Peréz
+* Carlos Herrera Rojano
