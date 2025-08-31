@@ -10,11 +10,18 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f8fafc;
     color: #1e293b;
+}
+
+main {
+    flex: 1;
 }
 
 img,
@@ -43,6 +50,10 @@ h6 {
     overflow-wrap: break-word;
 }
 
+main {
+    flex: 1;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -53,21 +64,6 @@ h6 {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-}
-
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 100;
-}
-
-.skip-link:focus {
-    top: 6px;
 }
 
 .container {
@@ -205,6 +201,10 @@ label {
     position: relative;
 }
 
+.search-icon {
+    filter: brightness(0) invert(1); 
+    transition: filter 0.2s ease;
+}
 
 .search-form input {
     border-radius: 0.5rem 0 0 0.5rem;
@@ -240,7 +240,6 @@ label {
     margin: 0;
     padding: 0;
 }
-
 
 #primary-nav a {
     text-decoration: none;

@@ -24,7 +24,6 @@
 </head>
 
 <body>
-    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
     <header role="banner" class="site-header">
         <div class="container nav">
             <a class="brand" aria-label="Inicio" href="index.html">
@@ -33,22 +32,26 @@
             </a>
 
             <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
-                <span class="visually-hidden">Abrir menú</span>☰
+                <span class="visually-hidden">Abrir menú</span>
+                <img src="assets/svg/hamburguerMenu.svg" alt="menú">
             </button>
 
             <form class="search-form" role="search" aria-label="Buscar en el sitio" action="tienda.html" method="get">
                 <label class="visually-hidden" for="q">Buscar</label>
                 <input id="q" name="q" type="search" placeholder="Buscar" autocomplete="off" />
-                <button type="submit" class="btn" aria-label="Enviar búsqueda">🔍</button>
+                <button type="submit" class="btn" aria-label="Enviar búsqueda">
+                    <img src="assets/svg/search.svg" alt="" width="24" height="24" class="search-icon"
+                        aria-hidden="true">
+                </button>
             </form>
 
             <nav id="primary-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
                     <li><a href="tienda.html">Tienda</a></li>
                     <li><a href="resenas.html">Reseñas</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="location.html">Ubicación</a></li>
                 </ul>
             </nav>
         </div>
@@ -60,23 +63,29 @@
             <div class="product-grid">
                 <figure class="gallery">
                     <div class="thumbs" aria-label="Miniaturas de producto">
-                        <button type="button" aria-label="Ver imagen 1" class="thumb"><img
-                                src="https://placehold.co/72x72?text=1" alt="Miniatura 1 del producto"></button>
-                        <button type="button" aria-label="Ver imagen 2" class="thumb"><img
-                                src="https://placehold.co/72x72?text=2" alt="Miniatura 2 del producto"></button>
-                        <button type="button" aria-label="Ver imagen 3" class="thumb"><img
-                                src="https://placehold.co/72x72?text=3" alt="Miniatura 3 del producto"></button>
-                        <button type="button" aria-label="Ver imagen 4" class="thumb"><img
-                                src="https://placehold.co/72x72?text=4" alt="Miniatura 4 del producto"></button>
+                        <button type="button" aria-label="Ver imagen 1" class="thumb">
+                            <img src="https://placehold.co/72x72?text=1" alt="Miniatura 1 del producto">
+                        </button>
+                        <button type="button" aria-label="Ver imagen 2" class="thumb">
+                            <img src="https://placehold.co/72x72?text=2" alt="Miniatura 2 del producto">
+                        </button>
+                        <button type="button" aria-label="Ver imagen 3" class="thumb">
+                            <img src="https://placehold.co/72x72?text=3" alt="Miniatura 3 del producto">
+                        </button>
+                        <button type="button" aria-label="Ver imagen 4" class="thumb">
+                            <img src="https://placehold.co/72x72?text=4" alt="Miniatura 4 del producto">
+                        </button>
                     </div>
                     <div class="main-image">
-                        <button class="favorite" type="button" aria-pressed="false"
-                            aria-label="Añadir a favoritos">❤<span class="visually-hidden">Añadir a
-                                favoritos</span></button>
+                        <button class="favorite" type="button" aria-pressed="false" aria-label="Añadir a favoritos">
+                            <img src="assets/svg/heart.svg" alt="" class="heart-icon">
+                            <span class="visually-hidden">Añadir a favoritos</span>
+                        </button>
                         <img id="main-img" src="https://placehold.co/600x420?text=Producto"
                             alt="Imagen principal del producto">
                         <figcaption class="visually-hidden">Galería del producto</figcaption>
                     </div>
+
                 </figure>
 
                 <div>
@@ -87,28 +96,29 @@
                     <div class="controls" role="group" aria-label="Opciones de compra">
                         <div>
                             <label for="opcion1">Talla</label>
-                            <select id="opcion1" name="opcion1">
+                            <select id="opcion1" name="opcion1" aria-describedby="talla-help">
                                 <option value="" selected>Selecciona una talla</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
                             </select>
                         </div>
 
                         <div>
                             <label for="opcion2">Color</label>
-                            <select id="opcion2" name="opcion2">
+                            <select id="opcion2" name="opcion2" aria-describedby="color-help">
                                 <option value="" selected>Elige un color</option>
-                                <option>Negro</option>
-                                <option>Azul</option>
+                                <option value="negro">Negro</option>
+                                <option value="azul">Azul</option>
                             </select>
                         </div>
 
-                        <button type="button" class="btn buy">Comprar ahora</button>
+                        <button type="button" class="btn buy" aria-describedby="buy-status">Comprar ahora</button>
+                        <div id="buy-status" class="visually-hidden" aria-live="polite"></div>
                     </div>
 
                     <details>
-                        <summary>Detalles</summary>
+                        <summary aria-expanded="false">Detalles</summary>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -121,22 +131,40 @@
             <h2 id="reviews-heading">Últimas reseñas</h2>
             <div class="cards">
                 <article class="card" aria-labelledby="r1-title">
-                    <p class="stars" role="img" aria-label="5 de 5">⭐️⭐️⭐️⭐️⭐️<span class="visually-hidden">5 de
-                            5</span></p>
+                    <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <span class="visually-hidden">5 de 5</span>
+                    </div>
                     <h3 id="r1-title">Excelente calidad</h3>
                     <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit
                         amet quam vehicula elementum sed sit amet dui.</p>
                 </article>
                 <article class="card" aria-labelledby="r2-title">
-                    <p class="stars" role="img" aria-label="4 de 5">⭐️⭐️⭐️⭐️☆<span class="visually-hidden">4 de 5</span>
-                    </p>
+                    <div class="stars" role="img" aria-label="4 de 5 estrellas">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_unfilled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <span class="visually-hidden">4 de 5</span>
+                    </div>
                     <h3 id="r2-title">Muy recomendado</h3>
                     <p class="muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
                         turpis egestas.</p>
                 </article>
                 <article class="card" aria-labelledby="r3-title">
-                    <p class="stars" role="img" aria-label="5 de 5">⭐️⭐️⭐️⭐️⭐️<span class="visually-hidden">5 de
-                            5</span></p>
+                    <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <img src="assets/svg/star_filled.svg" alt="" width="20" height="20" aria-hidden="true">
+                        <span class="visually-hidden">5 de 5</span>
+                    </div>
                     <h3 id="r3-title">Lo volvería a comprar</h3>
                     <p class="muted">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla
                         sit amet nisl tempus.</p>
@@ -155,18 +183,23 @@
                 <ul>
                     <li><a href="tienda.html">Tienda</a></li>
                     <li><a href="resenas.html">Reseñas</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="ubicacion.html">Ubicación</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="location.html">Ubicación</a></li>
                 </ul>
             </nav>
             <div class="social" aria-label="Redes sociales">
-                <a href="#" aria-label="Síguenos en X"><img src="assets/svg/X.svg" alt="" width="20" height="20"></a>
-                <a href="#" aria-label="Síguenos en YouTube"><img src="assets/svg/Youtube.svg" alt="" width="20"
-                        height="20"></a>
-                <a href="#" aria-label="Síguenos en Instagram"><img src="assets/svg/Instagram.svg" alt="" width="20"
-                        height="20"></a>
-                <a href="#" aria-label="Síguenos en LinkedIn"><img src="assets/svg/LinkedIn.svg" alt="" width="20"
-                        height="20"></a>
+                <a href="#" aria-label="Síguenos en X">
+                    <img src="assets/svg/X.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en YouTube">
+                    <img src="assets/svg/Youtube.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en Instagram">
+                    <img src="assets/svg/Instagram.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en LinkedIn">
+                    <img src="assets/svg/LinkedIn.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
             </div>
             <p class="muted">© <span id="year">2025</span> Kiosk Community</p>
         </div>
