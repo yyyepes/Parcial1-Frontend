@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kiosk Community – Inicio</title>
+    <meta name="description" content="Producto destacado, reseñas y más." />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#111827" />
+    <meta property="og:title" content="Kiosk Community – Inicio" />
+    <meta property="og:description" content="Producto destacado, reseñas y más." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <script defer src="js/home.js"></script>
+</head>
+
+<body>
+    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+    <header role="banner" class="site-header">
+        <div class="container nav">
+            <a class="brand" aria-label="Inicio" href="index.html">
+                <img src="assets/svg/Shop.svg" alt="" width="28" height="28" aria-hidden="true">
+                <span>Kiosk Community</span>
+            </a>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+                <span class="visually-hidden">Abrir menú</span>☰
+            </button>
+
+            <form class="search-form" role="search" aria-label="Buscar en el sitio" action="tienda.html" method="get">
+                <label class="visually-hidden" for="q">Buscar</label>
+                <input id="q" name="q" type="search" placeholder="Buscar" autocomplete="off" />
+                <button type="submit" class="btn" aria-label="Enviar búsqueda">🔍</button>
+            </form>
+
+            <nav id="primary-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="resenas.html">Reseñas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido" class="container" role="main">
+        <section aria-labelledby="featured-heading">
+            <h1 id="featured-heading">Producto destacado</h1>
+            <div class="product-grid">
+                <figure class="gallery">
+                    <div class="thumbs" aria-label="Miniaturas de producto">
+                        <button type="button" aria-label="Ver imagen 1" class="thumb"><img
+                                src="https://placehold.co/72x72?text=1" alt="Miniatura 1 del producto"></button>
+                        <button type="button" aria-label="Ver imagen 2" class="thumb"><img
+                                src="https://placehold.co/72x72?text=2" alt="Miniatura 2 del producto"></button>
+                        <button type="button" aria-label="Ver imagen 3" class="thumb"><img
+                                src="https://placehold.co/72x72?text=3" alt="Miniatura 3 del producto"></button>
+                        <button type="button" aria-label="Ver imagen 4" class="thumb"><img
+                                src="https://placehold.co/72x72?text=4" alt="Miniatura 4 del producto"></button>
+                    </div>
+                    <div class="main-image">
+                        <button class="favorite" type="button" aria-pressed="false"
+                            aria-label="Añadir a favoritos">❤<span class="visually-hidden">Añadir a
+                                favoritos</span></button>
+                        <img id="main-img" src="https://placehold.co/600x420?text=Producto"
+                            alt="Imagen principal del producto">
+                        <figcaption class="visually-hidden">Galería del producto</figcaption>
+                    </div>
+                </figure>
+
+                <div>
+                    <span class="badge" aria-label="Producto nuevo">Nuevo</span>
+                    <p class="price" aria-label="Precio 75 dólares">$75</p>
+                    <p class="stock" aria-live="polite">En stock</p>
+
+                    <div class="controls" role="group" aria-label="Opciones de compra">
+                        <div>
+                            <label for="opcion1">Talla</label>
+                            <select id="opcion1" name="opcion1">
+                                <option value="" selected>Selecciona una talla</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="opcion2">Color</label>
+                            <select id="opcion2" name="opcion2">
+                                <option value="" selected>Elige un color</option>
+                                <option>Negro</option>
+                                <option>Azul</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn buy">Comprar ahora</button>
+                    </div>
+
+                    <details>
+                        <summary>Detalles</summary>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="reviews-heading">
+            <h2 id="reviews-heading">Últimas reseñas</h2>
+            <div class="cards">
+                <article class="card" aria-labelledby="r1-title">
+                    <p class="stars" role="img" aria-label="5 de 5">⭐️⭐️⭐️⭐️⭐️<span class="visually-hidden">5 de
+                            5</span></p>
+                    <h3 id="r1-title">Excelente calidad</h3>
+                    <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit
+                        amet quam vehicula elementum sed sit amet dui.</p>
+                </article>
+                <article class="card" aria-labelledby="r2-title">
+                    <p class="stars" role="img" aria-label="4 de 5">⭐️⭐️⭐️⭐️☆<span class="visually-hidden">4 de 5</span>
+                    </p>
+                    <h3 id="r2-title">Muy recomendado</h3>
+                    <p class="muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                        turpis egestas.</p>
+                </article>
+                <article class="card" aria-labelledby="r3-title">
+                    <p class="stars" role="img" aria-label="5 de 5">⭐️⭐️⭐️⭐️⭐️<span class="visually-hidden">5 de
+                            5</span></p>
+                    <h3 id="r3-title">Lo volvería a comprar</h3>
+                    <p class="muted">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla
+                        sit amet nisl tempus.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-grid">
+            <a class="brand" href="index.html">
+                <img src="assets/svg/Shop.svg" alt="" width="24" height="24" aria-hidden="true">
+                <span>Kiosk Community</span>
+            </a>
+            <nav aria-label="Enlaces de pie">
+                <ul>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="resenas.html">Reseñas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ubicacion.html">Ubicación</a></li>
+                </ul>
+            </nav>
+            <div class="social" aria-label="Redes sociales">
+                <a href="#" aria-label="Síguenos en X"><img src="assets/svg/X.svg" alt="" width="20" height="20"></a>
+                <a href="#" aria-label="Síguenos en YouTube"><img src="assets/svg/Youtube.svg" alt="" width="20"
+                        height="20"></a>
+                <a href="#" aria-label="Síguenos en Instagram"><img src="assets/svg/Instagram.svg" alt="" width="20"
+                        height="20"></a>
+                <a href="#" aria-label="Síguenos en LinkedIn"><img src="assets/svg/LinkedIn.svg" alt="" width="20"
+                        height="20"></a>
+            </div>
+            <p class="muted">© <span id="year">2025</span> Kiosk Community</p>
+        </div>
+        <script>
+            (function () {
+                var y = new Date().getFullYear();
+                var el = document.getElementById('year');
+                if (el) el.textContent = y;
+            })();
+        </script>
+    </footer>
+</body>
+
+</html>
