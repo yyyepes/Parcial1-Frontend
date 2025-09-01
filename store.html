@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kiosk Community – Tienda</title>
+    <meta name="description" content="Explora nuestro catálogo de productos." />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#111827" />
+    <meta property="og:title" content="Kiosk Community – Tienda" />
+    <meta property="og:description" content="Explora nuestro catálogo de productos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/store.css" />
+    <script defer src="js/store.js"></script>
+</head>
+
+<body>
+    <header role="banner" class="site-header">
+        <div class="container nav">
+            <a class="brand" aria-label="Inicio" href="index.html">
+                <img src="assets/svg/Shop.svg" alt="" width="28" height="28" aria-hidden="true">
+                <span>Kiosk Community</span>
+            </a>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+                <span class="visually-hidden">Abrir menú</span>☰
+            </button>
+
+            <form class="search-form" role="search" aria-label="Buscar en el sitio" action="store.html" method="get">
+                <label class="visually-hidden" for="q">Buscar</label>
+                <input id="q" name="q" type="search" placeholder="Buscar" autocomplete="off" />
+                <button type="submit" class="btn" aria-label="Enviar búsqueda">
+                    <img src="assets/svg/search.svg" alt="" width="24" height="24" class="search-icon"
+                        aria-hidden="true">
+                </button>
+            </form>
+
+            <nav id="primary-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="store.html" aria-current="page">Tienda</a></li>
+                    <li><a href="reviews.html">Reseñas</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="location.html">Ubicación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido" role="main">
+        <section class="hero-section" aria-label="Productos destacados">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="https://placehold.co/1200x500?text=Oferta+Especial"
+                                alt="Oferta especial de temporada">
+                            <div class="carousel-content">
+                                <h2>Ofertas de Temporada</h2>
+                                <p>Hasta 50% de descuento en productos seleccionados</p>
+                                <a href="#" class="btn btn-primary">Ver ofertas</a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://placehold.co/1200x500?text=Nueva+Colección"
+                                alt="Nueva colección primavera">
+                            <div class="carousel-content">
+                                <h2>Nueva Colección</h2>
+                                <p>Descubre los últimos productos de nuestra tienda</p>
+                                <a href="#" class="btn btn-primary">Explorar</a>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://placehold.co/1200x500?text=Envío+Gratis" alt="Envío gratis en compras">
+                            <div class="carousel-content">
+                                <h2>Envío Gratis</h2>
+                                <p>En compras superiores a $50</p>
+                                <a href="#" class="btn btn-primary">Comprar ahora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-btn-next" aria-label="Siguiente">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <div class="carousel-indicators">
+                    <button class="indicator active" aria-label="Ir a slide 1"></button>
+                    <button class="indicator" aria-label="Ir a slide 2"></button>
+                    <button class="indicator" aria-label="Ir a slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Catalog Section -->
+        <section class="products-section container" aria-labelledby="catalog-heading">
+            <h1 id="catalog-heading">Catálogo de Productos</h1>
+
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <article class="product-card">
+                    <figure class="product-thumb">
+                        <img src="https://placehold.co/400x300?text=Producto+1" alt="Producto premium">
+                    </figure>
+
+                    <div class="product-body">
+                        <h3 class="product-title">Producto Premium</h3>
+                        <p class="product-price">$89.99</p>
+                    </div>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/400x300?text=Producto+2" alt="Producto exclusivo"
+                        class="product-thumb">
+                    <h3 class="product-title">Producto Exclusivo</h3>
+                    <p class="product-price">$62.99</p>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/400x300?text=Producto+3" alt="Producto popular"
+                        class="product-thumb">
+                    <h3 class="product-title">Producto Popular</h3>
+                    <p class="product-price">$45.00</p>
+                </article>
+
+                <!-- Producto 4 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/400x300?text=Producto+4" alt="Producto básico" class="product-thumb">
+                    <h3 class="product-title">Producto Básico</h3>
+                    <p class="product-price">$29.99</p>
+                </article>
+
+                <!-- Producto 5 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/400x300?text=Producto+5" alt="Producto especial"
+                        class="product-thumb">
+                    <h3 class="product-title">Producto Especial</h3>
+                    <p class="product-price">$124.99</p>
+                </article>
+
+                <!-- Producto 6 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/400x300?text=Producto+6" alt="Producto destacado"
+                        class="product-thumb">
+                    <h3 class="product-title">Producto Destacado</h3>
+                    <p class="product-price">$67.50</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-grid">
+            <a class="brand" href="index.html">
+                <img src="assets/svg/Shop.svg" alt="" width="24" height="24" aria-hidden="true">
+                <span>Kiosk Community</span>
+            </a>
+            <nav aria-label="Enlaces de pie">
+                <ul>
+                    <li><a href="store.html">Tienda</a></li>
+                    <li><a href="reviews.html">Reseñas</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="location.html">Ubicación</a></li>
+                </ul>
+            </nav>
+            <div class="social" aria-label="Redes sociales">
+                <a href="#" aria-label="Síguenos en X">
+                    <img src="assets/svg/X.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en YouTube">
+                    <img src="assets/svg/Youtube.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en Instagram">
+                    <img src="assets/svg/Instagram.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en LinkedIn">
+                    <img src="assets/svg/LinkedIn.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+            </div>
+            <p class="muted">© <span id="year">2025</span> Kiosk Community</p>
+        </div>
+        <script>
+            (function () {
+                var y = new Date().getFullYear();
+                var el = document.getElementById('year');
+                if (el) el.textContent = y;
+            })();
+        </script>
+    </footer>
+</body>
+
+</html>
