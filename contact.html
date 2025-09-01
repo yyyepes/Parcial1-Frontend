@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kiosk Community – Contacto</title>
+    <meta name="description" content="Ponte en contacto con nosotros. Estamos aquí para ayudarte." />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#111827" />
+    <meta property="og:title" content="Kiosk Community – Contacto" />
+    <meta property="og:description" content="Ponte en contacto con nosotros. Estamos aquí para ayudarte." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <script defer src="js/contact.js"></script>
+</head>
+
+<body>
+    <header role="banner" class="site-header">
+        <div class="container nav">
+            <a class="brand" aria-label="Inicio" href="index.html">
+                <img src="assets/svg/Shop.svg" alt="" width="28" height="28" aria-hidden="true">
+                <span>Kiosk Community</span>
+            </a>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+                <span class="visually-hidden">Abrir menú</span>
+                <img src="assets/svg/hamburguerMenu.svg" alt="menú">
+            </button>
+
+            <form class="search-form" role="search" aria-label="Buscar en el sitio" action="tienda.html" method="get">
+                <label class="visually-hidden" for="q">Buscar</label>
+                <input id="q" name="q" type="search" placeholder="Buscar" autocomplete="off" />
+                <button type="submit" class="btn" aria-label="Enviar búsqueda">
+                    <img src="assets/svg/search.svg" alt="" width="24" height="24" class="search-icon"
+                        aria-hidden="true">
+                </button>
+            </form>
+
+            <nav id="primary-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="resenas.html">Reseñas</a></li>
+                    <li><a href="contact.html" aria-current="page">Contacto</a></li>
+                    <li><a href="location.html">Ubicación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido" class="container" role="main">
+        <div class="contact-header">
+            <h1>Contacto</h1>
+            <p class="subtitle">¿Tienes alguna pregunta? Estamos aquí para ayudarte</p>
+        </div>
+
+        <div class="contact-grid">
+            <section class="contact-info" aria-labelledby="info-heading">
+                <h2 id="info-heading">Información de contacto</h2>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="icon-wrapper">
+                            <img src="assets/svg/email.svg" alt="correo electrónico" width="28" height="20">
+                        </div>
+                        <h3>Correo electrónico</h3>
+                        <a href="mailto:info@kioskcommunity.com" class="contact-link">info@kioskcommunity.com</a>
+                        <p class="muted">Responderemos en 24-48 horas</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper">
+                            <img src="assets/svg/phone.svg" alt="teléfono" width="24" height="24">
+                        </div>
+                        <h3>Teléfono</h3>
+                        <a href="tel:+00000000000" class="contact-link">+00 000 000 000</a>
+                        <p class="muted">Lun-Vie: 9:00 - 18:00</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper">
+                            <img src="assets/svg/location.svg" alt="ubicación" width="24" height="24">
+                        </div>
+                        <h3>Dirección</h3>
+                        <address>
+                            Calle AAAAA, 123<br>
+                            0000 Ciudad<br>
+                            País
+                        </address>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h3>Preguntas frecuentes</h3>
+                    <ul class="faq-list">
+                        <li><a href="#" class="faq-link">¿Cuáles son los plazos de envío?</a></li>
+                        <li><a href="#" class="faq-link">¿Puedo devolver un producto?</a></li>
+                        <li><a href="#" class="faq-link">¿Ofrecen garantía?</a></li>
+                        <li><a href="#" class="faq-link">¿Que medios de pago aceptan?</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="contact-form-section" aria-labelledby="form-heading">
+                <h2 id="form-heading">Envíanos un mensaje</h2>
+
+                <form id="contact-form" class="contact-form" method="post" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nombre completo <span aria-label="campo requerido">*</span></label>
+                        <input type="text" id="name" name="name" required aria-required="true"
+                            aria-describedby="name-error">
+                        <span class="error-message" id="name-error" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico <span aria-label="campo requerido">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true"
+                            aria-describedby="email-error">
+                        <span class="error-message" id="email-error" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" aria-describedby="phone-help">
+                        <span class="help-text" id="phone-help">Opcional: Solo si prefieres que te llamemos</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Asunto <span aria-label="campo requerido">*</span></label>
+                        <select id="subject" name="subject" required aria-required="true"
+                            aria-describedby="subject-error">
+                            <option value="">Selecciona un tema</option>
+                            <option value="general">Consulta general</option>
+                            <option value="pedido">Sobre mi pedido</option>
+                            <option value="producto">Información de producto</option>
+                            <option value="devolucion">Devolución o cambio</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje <span aria-label="campo requerido">*</span></label>
+                        <textarea id="message" name="message" rows="6" required aria-required="true"
+                            aria-describedby="message-error message-count"></textarea>
+                        <div class="textarea-footer">
+                            <span class="error-message" id="message-error" role="alert" aria-live="polite"></span>
+                            <span class="char-count" id="message-count" aria-live="polite">0/500</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn submit-btn">
+                        <span class="btn-text">Enviar mensaje</span>
+                    </button>
+
+                    <div class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-grid">
+            <a class="brand" href="index.html">
+                <img src="assets/svg/Shop.svg" alt="" width="24" height="24" aria-hidden="true">
+                <span>Kiosk Community</span>
+            </a>
+            <nav aria-label="Enlaces de pie">
+                <ul>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="resenas.html">Reseñas</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="location.html">Ubicación</a></li>
+                </ul>
+            </nav>
+            <div class="social" aria-label="Redes sociales">
+                <a href="#" aria-label="Síguenos en X">
+                    <img src="assets/svg/X.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en YouTube">
+                    <img src="assets/svg/Youtube.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en Instagram">
+                    <img src="assets/svg/Instagram.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+                <a href="#" aria-label="Síguenos en LinkedIn">
+                    <img src="assets/svg/LinkedIn.svg" alt="" width="20" height="20" aria-hidden="true">
+                </a>
+            </div>
+            <p class="muted">© <span id="year">2025</span> Kiosk Community</p>
+        </div>
+        <script>
+            (function () {
+                var y = new Date().getFullYear();
+                var el = document.getElementById('year');
+                if (el) el.textContent = y;
+            })();
+        </script>
+    </footer>
+</body>
+
+</html>
